@@ -132,4 +132,4 @@ jobs:
           image-ref: docker.io/${{ env.IMAGE_NAME }}:${{ github.sha }}
           format: table
           ignore-unfixed: true
-          severity: HIGH,CRITICAL      
+                
