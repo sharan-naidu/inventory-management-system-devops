@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 env:
-  IMAGE_NAME: sharan-naidu/inventory-management-system
+  IMAGE_NAME: sharanketon/inventory-management-system
 
 jobs:
 
