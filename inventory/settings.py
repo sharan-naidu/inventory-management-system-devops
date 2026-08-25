@@ -29,7 +29,16 @@ SECRET_KEY = 'django-insecure-xm4(e(ylnluuza*2w@&f2f^evaf&)$h4*uod_rpk(f=khyt=)q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["inventory.local", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "sharan.kubeace.in",
+    "inventory.local",
+    "localhost",
+    "127.0.0.1",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://sharan.kubeace.in",
+]
 
 
 # Application definition
