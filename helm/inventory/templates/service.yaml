@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: django
+spec:
+  selector:
+    app: django
+  ports:
+    - port: {{ .Values.django.service.port }}
+      targetPort: {{ .Values.django.service.targetPort }}
+  type: {{ .Values.django.service.type }}

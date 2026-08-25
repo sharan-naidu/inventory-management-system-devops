@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-xm4(e(ylnluuza*2w@&f2f^evaf&)$h4*uod_rpk(f=khyt=)q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["inventory.local", "localhost", "127.0.0.1"]
 
 
 # Application definition

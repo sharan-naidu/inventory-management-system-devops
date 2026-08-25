@@ -1,0 +1,36 @@
+replicaCount: 1
+
+django:
+  image:
+    repository: sharanketon/inventory-management-system
+    tag: latest
+    pullPolicy: Always
+
+  service:
+    type: NodePort
+    port: 8000
+    targetPort: 8000
+
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+
+postgres:
+  image:
+    repository: postgres
+    tag: 16-alpine
+
+  storage: 1Gi
+
+  database: inventory_db
+  username: inventory_user
+  password: inventory_password
+
+ingress:
+  enabled: true
+  className: nginx
+  host: inventory.local
