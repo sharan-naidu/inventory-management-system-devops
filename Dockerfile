@@ -10,12 +10,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
-# Copy only required application files
 COPY manage.py .
 COPY inventory/ ./inventory/
 COPY inventory_app/ ./inventory_app/
 
-# Create non-root user
 RUN addgroup --system django \
     && adduser --system --ingroup django django \
     && chown -R django:django /app
